@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurant Table</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-pzjw8f+8e63F6GggeV+nFq4E8Z+GaX5FZNO8iBCbI+xnE/2l0sibV2XAZQ5Tp0O1" crossorigin="anonymous">
+
+        <style>
+            body {
+                background-image: url('bgimage.jpg');
+                background-size: cover;
+                background-position: center;
+                background-repeat: no-repeat;
+                height: 100vh;
+                font-family: 'sans-serif', cursive;
+            }
+    
+            header {
+                position: relative;
+                text-align: center;
+                padding-top: 50px;
+                margin-bottom: 50px;
+            }
+    
+            .menu-table-container {
+                max-height: 500px;
+                max-width: 1500px;
+                overflow: auto;
+                margin: 0 auto;
+                text-align: center;
+            }
+    
+            .menu-table {
+                width: 100%;
+            }
+    
+            .menu-table th,
+            .menu-table td {
+                border: 1px solid black;
+                padding: 6px;
+                text-align: left;
+                font-size: 14px;
+            }
+    
+            .menu-table th {
+                background-color: #f2f2f2;
+            }
+    
+            .completed {
+                background-color: #4CAF50;
+                color: rgb(0, 0, 0);
+            }
+    
+            .in-progress {
+                background-color: #FFFF00; 
+                color: black;
+            }
+    
+            .empty {
+                background-color: red;
+            }
+    
+            .menu-table td:not(.empty) {
+                background-color: orange;
+            }
+            
+        </style>
+        
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Hamurz&display=swap">
+</head>
+
+<body>
+    <div class="container">
+
+        <header class="text-center my-5">
+            <h1>Restaurant Table</h1>
+        </header>
+
+        <section id="menu">
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title"></h5>
+                            <div class="menu-table-container mx-auto">
+                                <table class="menu-table">
+                                    <thead>
+                                        <tr>
+                                            <th>Table number</th>
+                                            <th>Status</th>
+                                            <th>Customer name</th>
+                                            <th>Order</th>
+                                            <th>Price</th>
+                                            <th>Order status</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>1</td>
+                                            <td>Occupied</td>
+                                            <td>John Doe</td>
+                                            <td>Tapsilog</td>
+                                            <td>90</td>
+                                            <td class="in-progress">In Progress</td>                            
+                                        </tr>
+                                        <tr class="empty">
+                                            <td>2</td>
+                                            <td>Empty</td>
+                                            <td>-</td>
+                                            <td>-</td>
+                                            <td>-</td>
+                                            <td>-</td>
+                                        </tr>
+                                        <tr>
+                                            <td>3</td>
+                                            <td>Occupied</td>
+                                            <td>Jane Smith</td>
+                                            <td>Chicksilog</td>
+                                            <td>80</td>
+                                            <td class="completed">Completed</td>
+                                        </tr>
+                                        <tr>
+                                            <td>4</td>
+                                            <td>Occupied</td>
+                                            <td>Michael Johnson</td>
+                                            <td>Spaghetti</td>
+                                            <td>60</td>
+                                            <td class="in-progress">In Progress</td>
+                                        </tr>
+                                        <tr class="empty">
+                                            <td>5</td>
+                                            <td>Empty</td>
+                                            <td>-</td>
+                                            <td>-</td>
+                                            <td>-</td>
+                                            <td>-</td>
+                                        </tr>
+                                        <tr>
+                                            <td>6</td>
+                                            <td>Occupied</td>
+                                            <td>Mary Brown</td>
+                                            <td>Fries</td>
+                                            <td>30</td>
+                                            <td class="completed">Completed</td>
+                                        </tr>
+                                        <tr class="empty">
+                                            <td>7</td>
+                                            <td>Empty</td>
+                                            <td>-</td>
+                                            <td>-</td>
+                                            <td>-</td>
+                                            <td>-</td>
+                                        </tr>
+                                        <tr>
+                                            <td>8</td>
+                                            <td>Occupied</td>
+                                            <td>David White</td>
+                                            <td>Ham Sandwich</td>
+                                            <td>30</td>
+                                            <td class="in-progress">In Progress</td>
+                                        </tr>
+                                        <tr class="empty">
+                                            <td>9</td>
+                                            <td>Empty</td>
+                                            <td>-</td>
+                                            <td>-</td>
+                                            <td>-</td>
+                                            <td>-</td>
+                                        </tr>
+                                        <tr>
+                                            <td>10</td>
+                                            <td>Occupied</td>
+                                            <td>John Wick</td>
+                                            <td>Sisigsilog</td>
+                                            <td>80</td>
+                                            <td class="completed">Completed</td>
+                                        </tr>
+                                        <tr class="empty">
+                                            <td>11</td>
+                                            <td>Empty</td>
+                                            <td>-</td>
+                                            <td>-</td>
+                                            <td>-</td>
+                                            <td>-</td>
+                                        </tr>
+                                        <tr>
+                                            <td>12</td>
+                                            <td>Occupied</td>
+                                            <td>Lebron James</td>
+                                            <td>Plain pares</td>
+                                            <td>70</td>
+                                            <td class="in-progress">In Progress</td>
+                                        </tr>
+                                        <tr>
+                                            <td>13</td>
+                                            <td>Occupied</td>
+                                            <td>Sir Gole</td>
+                                            <td>Lahat</td>
+                                            <td>1,000,000</td>
+                                            <td class="in-progress">In Progress</td>
+                                        </tr>
+                                        <tr>
+                                            <td>14</td>
+                                            <td>Occupied</td>
+                                            <td>Balanar</td>
+                                            <td>Plain lugaw</td>
+                                            <td>60</td>
+                                            <td class="completed">Completed</td>
+                                        </tr>
+                                        <tr>
+                                            <td>15</td>
+                                            <td>Occupied</td>
+                                            <td>Jennifer</td>
+                                            <td>Hotsilog w/ extra rice</td>
+                                            <td>85</td>
+                                            <td class="completed">Completed</td>
+                                        </tr>
+                                        <tr>
+                                            <td>16</td>
+                                            <td>Occupied</td>
+                                            <td>Jejomar Binay</td>
+                                            <td>Sisigsilog</td>
+                                            <td>80</td>
+                                            <td class="in-progress">In Progress</td>
+                                        </tr>
+                                        <tr class="empty">
+                                            <td>17</td>
+                                            <td>Empty</td>
+                                            <td>-</td>
+                                            <td>-</td>
+                                            <td>-</td>
+                                            <td>-</td>
+                                        </tr>
+                                        <tr>
+                                            <td>18</td>
+                                            <td>Occupied</td>
+                                            <td>John Doe</td>
+                                            <td>Tapsilog</td>
+                                            <td>90</td>
+                                            <td class="in-progress">In Progress</td>
+                                        </tr>
+                                        <tr>
+                                            <td>19</td>
+                                            <td>Occupied</td>
+                                            <td>Zark Muckerberg</td>
+                                            <td>Pancit</td>
+                                            <td>90</td>
+                                            <td class="completed">Completed</td>
+                                        </tr>
+                                        <tr>
+                                            <td>20</td>
+                                            <td>Occupied</td>
+                                            <td>Jackie Chan</td>
+                                            <td>Sinigang</td>
+                                            <td>60</td>
+                                            <td class="completed">Completed</td>
+                                        </tr>
+                                        <tr class="empty">
+                                            <td>21</td>
+                                            <td>Empty</td>
+                                            <td>-</td>
+                                            <td>-</td>
+                                            <td>-</td>
+                                            <td>-</td>
+                                        </tr>
+                                        <tr>
+                                            <td>22</td>
+                                            <td>Occupied</td>
+                                            <td>Snoop Dogg</td>
+                                            <td>Tapsilog</td>
+                                            <td>90</td>
+                                            <td class="completed">Completed</td>
+                                        </tr>
+                                        <tr>
+                                            <td>23</td>
+                                            <td>Occupied</td>
+                                            <td>Madman Stan</td>
+                                            <td>Chicksilog</td>
+                                            <td>80</td>
+                                            <td class="in-progress">In Progress</td>
+                                        </tr>
+                                        
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-KyZXEAg3QhqLMpG8r+Knujsl5+2vxXs5BkJKjcOQLvEdAho2wO8kFqFsgvXjz4CS" crossorigin="anonymous">
+    </script>
+</body>
+
+</html>
+
